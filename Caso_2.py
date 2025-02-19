@@ -3,23 +3,23 @@ import heapq
 
 # Definición del grafo (ciudades y rutas con distancias)  
 graph = {  
-    'Tunja': {'Bogotá': 150, 'Tabio': 128,'Facatativa': 42,'Alban': 17,'Viani': 30,'Cambao':47,'Guayabal': 33,'Mariquita': 20,'Fresno': 25,'Padua': 16,'Manizales': 0},  
+    'Tunja': {'Bogotá': 150, 'Duitama': 50},  
+    'Bogotá': {'Tunja': 150, 'Manizales': 300, 'Medellín': 250},  
+    'Duitama': {'Tunja': 50, 'Sogamoso': 30},  
+    'Sogamoso': {'Duitama': 30, 'Manizales': 200},  
+    'Medellín': {'Bogotá': 250, 'Manizales': 100},  
+    'Manizales': {'Bogotá': 300, 'Medellín': 100, 'Sogamoso': 200}   
    
 }  
 
 # Heurística: Distancia en línea recta estimada a Manizales (valores ficticios)  
 heuristic = {  
-    'Tunja': 246,  
-    'Tabio': 128,  
-    'Facatativa': 42,  
-    'Alban': 17,  
-    'Viani': 30,
-    'Cambao':47,
-    'Guayabal': 33,
-    'Mariquita': 20,
-    'Fresno': 25,
-    'Padua': 16,
-    'Manizales': 0 
+    'Tunja': 250,  
+    'Bogotá': 200,  
+    'Duitama': 220,  
+    'Sogamoso': 180,  
+    'Medellín': 50,  
+    'Manizales': 0   
 }  
 
 # Algoritmo A*  
